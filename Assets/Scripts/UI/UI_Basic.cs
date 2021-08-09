@@ -19,7 +19,7 @@ public class UI_Basic : MonoBehaviour
             Instance = this;
 
         killCountTxt.text = "Kill: 00";
-        coinsCountTxt.text = "Coins: 00";
+        coinsCountTxt.text = "CoinsCount: 00";
     }
 
     public void KillCountUI()
