@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_MoveMent : MonoBehaviour
 {
-
     [Header("Movement")]
     [SerializeField] float speed = 1200f;
     [SerializeField] float runSpeed = 2f;
@@ -39,6 +38,8 @@ public class Player_MoveMent : MonoBehaviour
     [Header("Components")]
     [SerializeField] Rigidbody2D rigidbody2D;
     [SerializeField] Animator anim;
+
+    float forceY;
 
     void Start()
     {
@@ -86,7 +87,8 @@ public class Player_MoveMent : MonoBehaviour
 
     void Movement()
     {
-        float forceX = 0f, forceY = 0f;
+        float forceX = 0f;
+        forceY = 0f;
         float velocity = Mathf.Abs(rigidbody2D.velocity.x);
 
         xInput = Input.GetAxis("Horizontal");
@@ -132,27 +134,27 @@ public class Player_MoveMent : MonoBehaviour
                     forceX = -speed * Time.fixedDeltaTime;
             }
         }
-
+        
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
             currentJump += 1;
 
-            if (isGrounded)
-                forceY = jumpForce;
-            else
+            if (!isGrounded)
             {
                 if (currentJump <= maxJump)
                 {
                     forceY = jumpForce;
                 }
             }
+            else
+            {
+                forceY = jumpForce;
+            }
         }
-
-        rigidbody2D.AddForce(new Vector2(forceX, forceY * Time.fixedDeltaTime));
+ 
+        rigidbody2D.AddForce(new Vector2(forceX, forceY), ForceMode2D.Impulse);
 
         // Animatiom
-        anim.SetFloat("Speed", Mathf.Abs(rigidbody2D.velocity.x));
-
         anim.SetFloat("Speed", Mathf.Abs(rigidbody2D.velocity.x));
 
         if (Input.GetKeyDown(KeyCode.Z) || Input.GetKeyDown(KeyCode.K))
@@ -185,10 +187,7 @@ public class Player_MoveMent : MonoBehaviour
                 }
             }
         }
-        else
-            isGrounded = false;
-
-        if (rightHIt.collider != null)
+        else if (rightHIt.collider != null)
         {
             isGrounded = true;
             currentJump = 0;
@@ -206,6 +205,8 @@ public class Player_MoveMent : MonoBehaviour
         else
             isGrounded = false;
     }
+
+
 
     void FlipCharcter()
     {
