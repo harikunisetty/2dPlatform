@@ -5164,9 +5164,9 @@ GameObject:
   - component: {fileID: 78364515}
   - component: {fileID: 78364517}
   - component: {fileID: 78364516}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Bananas_0 (3)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8494,11 +8494,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133027674}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: 0.594, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.014, y: -0.049, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_Children: []
-  m_Father: {fileID: 6502057155618209996}
+  m_Father: {fileID: 162003270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &135353677
@@ -10633,6 +10633,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &162003270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6502057156567150116, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
+  m_PrefabInstance: {fileID: 6502057155461969199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &164249538
 GameObject:
   m_ObjectHideFlags: 0
@@ -23620,9 +23625,9 @@ GameObject:
   - component: {fileID: 353854585}
   - component: {fileID: 353854588}
   - component: {fileID: 353854587}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cherries_0
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27767,9 +27772,9 @@ GameObject:
   - component: {fileID: 423354909}
   - component: {fileID: 423354912}
   - component: {fileID: 423354911}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Kiwi_0 (2)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34233,7 +34238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 331.7, y: -24.5}
+  m_AnchoredPosition: {x: 284.1, y: -24.5}
   m_SizeDelta: {x: 152.39, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &529626636
@@ -54939,9 +54944,9 @@ GameObject:
   - component: {fileID: 801742209}
   - component: {fileID: 801742211}
   - component: {fileID: 801742210}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Kiwi_0 (3)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76418,7 +76423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.9899902, y: -58.22}
+  m_AnchoredPosition: {x: -57.22, y: -58.22}
   m_SizeDelta: {x: 293.2, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1103827413
@@ -88609,9 +88614,9 @@ GameObject:
   - component: {fileID: 1274656835}
   - component: {fileID: 1274656838}
   - component: {fileID: 1274656837}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Kiwi_0 (1)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89878,9 +89883,9 @@ GameObject:
   - component: {fileID: 1296636236}
   - component: {fileID: 1296636239}
   - component: {fileID: 1296636238}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cherries_0 (2)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106000,9 +106005,9 @@ GameObject:
   - component: {fileID: 1543035221}
   - component: {fileID: 1543035223}
   - component: {fileID: 1543035222}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cherries_0 (3)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131775,9 +131780,9 @@ GameObject:
   - component: {fileID: 1891924015}
   - component: {fileID: 1891924018}
   - component: {fileID: 1891924017}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Bananas_0
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134048,9 +134053,9 @@ GameObject:
   - component: {fileID: 1918587599}
   - component: {fileID: 1918587602}
   - component: {fileID: 1918587601}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Bananas_0 (2)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140920,9 +140925,9 @@ GameObject:
   - component: {fileID: 2015806132}
   - component: {fileID: 2015806135}
   - component: {fileID: 2015806134}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cherries_0 (1)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146215,9 +146220,9 @@ GameObject:
   - component: {fileID: 2085298294}
   - component: {fileID: 2085298297}
   - component: {fileID: 2085298296}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Kiwi_0
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150354,9 +150359,9 @@ GameObject:
   - component: {fileID: 2139758622}
   - component: {fileID: 2139758625}
   - component: {fileID: 2139758624}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Bananas_0 (1)
-  m_TagString: Untagged
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150966,6 +150971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parite
       objectReference: {fileID: 0}
+    - target: {fileID: 6147741758888072465, guid: 87e18f0bafb7b074e85d810dc3daab38, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6147741758888072466, guid: 87e18f0bafb7b074e85d810dc3daab38, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -151051,17 +151060,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6502057156567150113, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
+      propertyPath: ammo
+      value: 
+      objectReference: {fileID: 723147358859190488, guid: 22a51799cd99ca4448527a3e7b6189ae, type: 3}
+    - target: {fileID: 6502057156567150113, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
+      propertyPath: speed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502057156567150113, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
+      propertyPath: runSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502057156567150113, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
+      propertyPath: fireTrans
+      value: 
+      objectReference: {fileID: 133027675}
     - target: {fileID: 6502057156567150116, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 6502057156567150116, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.41
+      value: -6.32
       objectReference: {fileID: 0}
     - target: {fileID: 6502057156567150116, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.51
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 6502057156567150116, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -151099,10 +151124,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6502057156567150119, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86db5dc6fd2e75a4eb3669c08934278c, type: 3}
---- !u!4 &6502057155618209996 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6147741758888072466, guid: 87e18f0bafb7b074e85d810dc3daab38, type: 3}
-  m_PrefabInstance: {fileID: 1110937778930243038}
-  m_PrefabAsset: {fileID: 0}

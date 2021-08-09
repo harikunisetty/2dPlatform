@@ -167,9 +167,9 @@ public class Player_MoveMent : MonoBehaviour
 
     void GroundCheck()
     {
-        leftHit = Physics2D.Raycast(new Vector3(transform.position.x - 0.03f, transform.position.y, transform.position.z), Vector3.down, range, layerMask);
+        leftHit = Physics2D.Raycast(new Vector3(transform.position.x -1f, transform.position.y, transform.position.z), Vector3.down, range, layerMask);
 
-        rightHIt = Physics2D.Raycast(new Vector3(transform.position.x + 0.03f, transform.position.y, transform.position.z), Vector3.down, range, layerMask);
+        rightHIt = Physics2D.Raycast(new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z), Vector3.down, range, layerMask);
 
         if (leftHit.collider != null)
         {
@@ -233,11 +233,11 @@ public class Player_MoveMent : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(new Vector3(transform.position.x - 0.3f, transform.position.y, transform.position.z),
+        Gizmos.DrawRay(new Vector3(transform.position.x - 1f, transform.position.y, transform.position.z),
         Vector3.down * range);
 
         Gizmos.color = Color.black;
-        Gizmos.DrawRay(new Vector3(transform.position.x + 0.3f, transform.position.y, transform.position.z),
+        Gizmos.DrawRay(new Vector3(transform.position.x + 1f, transform.position.y, transform.position.z),
          Vector3.down * range);
     }
 }
