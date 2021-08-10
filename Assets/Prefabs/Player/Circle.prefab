@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 723147358859190488}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.13649675, y: 0.13649675, z: 0.13649675}
+  m_LocalScale: {x: 0.12081729, y: 0.07249038, z: 0.12081729}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,7 +95,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -134,4 +134,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8d99e7b9ed6edf4186d49bb5e8a3f49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathTime: 2

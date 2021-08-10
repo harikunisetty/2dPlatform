@@ -83,6 +83,12 @@ public class Player_MoveMent : MonoBehaviour
 
         if (collider.transform.name == "Level Changer")
             GameManager.Instance.LoadNextScene(collider.GetComponent <LoadLevelIndex> ().LevelIndex);
+
+        if (collider.gameObject.name.Equals("Player"))
+        {
+            Debug.Log("Hit!");
+            Destroy(gameObject);
+        }
     }
 
     void Movement()
@@ -165,6 +171,10 @@ public class Player_MoveMent : MonoBehaviour
             anim.SetBool("Jump", true);
         else
             anim.SetBool("Jump", false);
+        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.K))
+            anim.SetBool("Attack", true);
+        else
+            anim.SetBool("Attack", false);
     }
 
     void GroundCheck()
