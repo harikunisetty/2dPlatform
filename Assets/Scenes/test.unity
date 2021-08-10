@@ -472,7 +472,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
-  jumpForce: 10
-  currentJump: 0
-  maxJump: 2
+  jumpForce: 6
+  canSecondJump: 0
   rbd2d: {fileID: 0}

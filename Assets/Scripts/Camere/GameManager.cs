@@ -43,4 +43,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(levelIndex);
     }
+
+    public void ReloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }

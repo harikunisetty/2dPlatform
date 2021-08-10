@@ -5,9 +5,8 @@ using UnityEngine;
 public class JumpTest : MonoBehaviour
 {
     [SerializeField] bool isGrounded;
-    public float jumpForce = 10f;
-    public int currentJump;
-    public int maxJump = 2;
+    public float jumpForce = 6f;
+    public bool canSecondJump;
     public Rigidbody2D rbd2d;
 
     private void Awake()
@@ -17,25 +16,27 @@ public class JumpTest : MonoBehaviour
     void Update()
     {
         float forceY = 0f;
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
-        {
-            currentJump++;
 
-            if (!isGrounded)
+        if(isGrounded)
+        {
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
             {
-                if (currentJump <= maxJump)
-                {
-                    currentJump++;
-                    forceY = jumpForce;
-                }
-            }
-            else
-            {
-                currentJump++;
+                canSecondJump = true;
                 forceY = jumpForce;
             }
         }
-
+        else
+        {
+            if (canSecondJump)
+            {
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+                {
+                    canSecondJump = false;
+                    forceY = jumpForce;
+                }
+            }
+        }
+        
         rbd2d.AddForce(new Vector2(rbd2d.velocity.x, forceY), ForceMode2D.Impulse);
     }
 
@@ -44,7 +45,6 @@ public class JumpTest : MonoBehaviour
         if(other.gameObject.name == "Square")
         {
             isGrounded = true;
-            currentJump = 0;
         }
     }
 

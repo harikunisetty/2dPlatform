@@ -14,19 +14,26 @@ public class PlayerAmmo : MonoBehaviour
 
     void Start()
     {
+        /*
         rb = GetComponent<Rigidbody2D>();
         target = GameObject.FindObjectOfType<Player_MoveMent>();
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(moveDirection.x, moveDirection.y);
         Destroy(gameObject, 3f);
+        */
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (col.gameObject.name.Equals("Player"))
+        if (other.gameObject.layer == 7)
         {
-            Debug.Log("Hit!");
-            Destroy(gameObject);
+            Destroy(other.gameObject); // collided(enemy) gameobject
+            Destroy(this.gameObject); // ammo gameobject
+        }
+
+        if(other.gameObject.layer == 0)
+        {
+            Destroy(this.gameObject); // ammo gameobject
         }
     }
 }

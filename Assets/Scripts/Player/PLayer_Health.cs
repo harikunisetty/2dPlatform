@@ -26,6 +26,7 @@ public class PLayer_Health : MonoBehaviour
         else
         {
             Debug.Log("Game OVer! " + health);
+            GameManager.Instance.ReloadScene();
         }
     }
 }
