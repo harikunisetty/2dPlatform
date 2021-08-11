@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4089719552235082972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.635, y: 0.6, z: 0}
+  m_LocalPosition: {x: 0.417, y: 0.432, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6147741758888072466}
@@ -173,9 +173,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.031882286, y: 0.5184328}
   m_SpriteTilingProperty:
-    border: {x: 0.22900002, y: 0.11400001, z: 0.707, w: 0.26900002}
+    border: {x: 0.32714286, y: 0.16285715, z: 1.01, w: 0.38428572}
     pivot: {x: 0.39, y: 0.13}
-    oldSize: {x: 1.421, y: 1.203}
+    oldSize: {x: 2.03, y: 1.7185714}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -196,17 +196,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b35c16923298224eb2b01d2acee515d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
-  runSpeed: 500
+  speed: 15
+  runSpeed: 15
   maxVelocity: 4
-  jumpForce: 10000
+  jumpForce: 2
+  canSecondJump: 0
   currentJump: 0
-  maxJump: 2
   range: 0.23
   isGrounded: 0
   layerMask:
     serializedVersion: 2
-    m_Bits: 137
+    m_Bits: 2185
   groundCheckTrans: {fileID: 6147741758888072465}
   attackIntervals: 0.1
   nextAttack: 0

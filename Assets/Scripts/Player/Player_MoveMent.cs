@@ -12,8 +12,10 @@ public class Player_MoveMent : MonoBehaviour
     private float xInput, yInput;
 
     [Header("Jump")]
-    [SerializeField] float jumpForce = 750f;
-    [SerializeField] int currentJump, maxJump = 2;
+    public float jumpForce = 6f;
+    public bool canSecondJump;
+    public int currentJump;
+   
 
 
     [Header("Ground")]
@@ -89,18 +91,19 @@ public class Player_MoveMent : MonoBehaviour
             Debug.Log("Hit!");
             Destroy(gameObject);
         }
+
     }
 
     void Movement()
     {
         float forceX = 0f;
-        forceY = 0f;
+         float forceY = 0f;
         float velocity = Mathf.Abs(rigidbody2D.velocity.x);
 
         xInput = Input.GetAxis("Horizontal");
         yInput = Input.GetAxis("Vertical");
 
-        rigidbody2D.AddForce(new Vector2(forceX, 0f));
+       rigidbody2D.AddForce(new Vector2(forceX, 0f));
 
         if (xInput > 0)
         {
@@ -140,22 +143,31 @@ public class Player_MoveMent : MonoBehaviour
                     forceX = -speed * Time.fixedDeltaTime;
             }
         }
-        
+
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
         {
-            currentJump += 1;
+          
 
-            if (!isGrounded)
+            if (isGrounded)
             {
-                if (currentJump <= maxJump)
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
                 {
+                    canSecondJump = true;
                     forceY = jumpForce;
                 }
             }
             else
             {
-                forceY = jumpForce;
+                if (canSecondJump)
+                {
+                    if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
+                    {
+                        canSecondJump = false;
+                        forceY = jumpForce;
+                    }
+                }
             }
+
         }
  
         rigidbody2D.AddForce(new Vector2(forceX, forceY), ForceMode2D.Impulse);
@@ -167,11 +179,11 @@ public class Player_MoveMent : MonoBehaviour
             anim.SetBool("Run", true);
         else
             anim.SetBool("Run", false);
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
             anim.SetBool("Jump", true);
         else
             anim.SetBool("Jump", false);
-        if (Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.X))
             anim.SetBool("Attack", true);
         else
             anim.SetBool("Attack", false);
@@ -199,7 +211,7 @@ public class Player_MoveMent : MonoBehaviour
         }
         else if (rightHIt.collider != null)
         {
-            isGrounded = true;
+           isGrounded = true;
             currentJump = 0;
 
             if (rightHIt.collider.gameObject.layer == enemyLayer)
@@ -215,7 +227,21 @@ public class Player_MoveMent : MonoBehaviour
         else
             isGrounded = false;
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Main Ground")
+        {
+            isGrounded = false;
+        }
+    }
 
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Main Ground")
+        {
+            isGrounded = true;
+        }
+    }
 
 
     void FlipCharcter()
