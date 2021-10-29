@@ -38,7 +38,7 @@ public class Player_MoveMent : MonoBehaviour
     private int enemyLayer;
 
     [Header("Components")]
-    [SerializeField] Rigidbody2D rigidbody2D;
+    [SerializeField] new Rigidbody2D rigidbody2D;
     [SerializeField] Animator anim;
 
     float forceY;
@@ -83,9 +83,9 @@ public class Player_MoveMent : MonoBehaviour
             GameManager.Instance.UpdateCoins();
         }
 
-        if (collider.transform.name == "Level Changer")
-            GameManager.Instance.LoadNextScene(collider.GetComponent <LoadLevelIndex> ().LevelIndex);
-
+       /* if (collider.transform.name == "Level Changer")
+            GameManager.Instance.LoadNextScene(collider.GetComponent <LoadLevelIndex> ().LoadLevelIndex);
+*/
         if (collider.gameObject.name.Equals("Player"))
         {
             Debug.Log("Hit!");
@@ -100,10 +100,12 @@ public class Player_MoveMent : MonoBehaviour
          float forceY = 0f;
         float velocity = Mathf.Abs(rigidbody2D.velocity.x);
 
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        xInput = Input.GetAxis("Horizontal") * speed;
 
-       rigidbody2D.AddForce(new Vector2(forceX, 0f));
+        if (Input.GetButtonDown("Jump") && rigidbody2D.velocity.y == 0)
+            rigidbody2D.AddForce(Vector2.up * 500f);
+
+        rigidbody2D.velocity = new Vector2(xInput, rigidbody2D.velocity.y);
 
         if (xInput > 0)
         {
@@ -205,8 +207,9 @@ public class Player_MoveMent : MonoBehaviour
                 if (!leftHit.collider.GetComponent<AI_Basic>().isDead)
                 {
                     leftHit.collider.GetComponent<AI_Basic>().isDead = true;
-                    StompEnemy(leftHit.collider.gameObject);
+                  
                 }
+                StompEnemy(leftHit.collider.gameObject);
             }
         }
         else if (rightHIt.collider != null)
@@ -219,9 +222,9 @@ public class Player_MoveMent : MonoBehaviour
                 if (!rightHIt.collider.GetComponent<AI_Basic>().isDead)
                 {
                     rightHIt.collider.GetComponent<AI_Basic>().isDead = true;
-                    StompEnemy(leftHit.collider.gameObject);
+                    
                 }
-               
+                StompEnemy(leftHit.collider.gameObject);
             }
         }
         else

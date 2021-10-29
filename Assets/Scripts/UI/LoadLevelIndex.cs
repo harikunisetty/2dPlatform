@@ -4,6 +4,22 @@ using UnityEngine;
 
 public class LoadLevelIndex : MonoBehaviour
 {
-    public int LevelIndex;
-    
+    [SerializeField] bool isobjectiveCompleted;
+
+    public bool IsObjectiveCompleted
+    {
+        get { return isobjectiveCompleted; }
+    }
+    private void Start()
+    {
+        isobjectiveCompleted = false;
+    }
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isobjectiveCompleted = true;
+        }
+    }
+
 }
