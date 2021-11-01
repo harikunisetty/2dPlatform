@@ -222,10 +222,10 @@ public class Player_MoveMent : MonoBehaviour
                 if (!rightHIt.collider.GetComponent<AI_Basic>().isDead)
                 {
                     rightHIt.collider.GetComponent<AI_Basic>().isDead = true;
-                    
+                    StompEnemy(leftHit.collider.gameObject);
                 }
-                StompEnemy(leftHit.collider.gameObject);
             }
+              
         }
         else
             isGrounded = false;
